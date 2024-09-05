@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Jokenpô</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Jogo do Jokenpô</h1>
+    <div id="jogo">
+        <div id="escolha-jogador">
+            <h2>Escolha uma opção:</h2>
+            <button onclick="jogar('pedra')">Pedra</button>
+            <button onclick="jogar('papel')">Papel</button>
+            <button onclick="jogar('tesoura')">Tesoura</button>
+        </div>
+        <div id="resultado">
+            <p id="movimento-jogador"></p>
+            <p id="movimento-computador"></p>
+            <p id="resultado-jogo"></p>
+        </div>
+        <div id="placar">
+            <h2>Placar</h2>
+            <p>Vitórias do Jogador: <span id="vitorias-jogador">0</span></p>
+            <p>Vitórias do Computador: <span id="vitorias-computador">0</span></p>
+            <p>Empates: <span id="empates">0</span></p>
+        </div>
+    </div>
+    <script src="jogo.js"></script>
+</body>
+</html>
