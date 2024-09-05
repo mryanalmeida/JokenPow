@@ -1,6 +1,6 @@
 {
     "name": "JokenPow",
-    "start_url": "/",
+    "start_url": "/JokenPow",
     "display": "standalone",
     "icons": [
         {
