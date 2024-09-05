@@ -1,7 +1,12 @@
 // Variáveis do Placar
-let vitoriasJogador = 0;
-let vitoriasComputador = 0;
-let empates = 0;
+let vitoriasJogador = parseInt(localStorage.getItem('vitoriasJogador')) || 0;
+let vitoriasComputador = parseInt(localStorage.getItem('vitoriasComputador')) || 0;
+let empates = parseInt(localStorage.getItem('empates')) || 0;
+
+// Atualiza o placar na tela ao carregar a página
+document.getElementById('vitorias-jogador').innerText = vitoriasJogador;
+document.getElementById('vitorias-computador').innerText = vitoriasComputador;
+document.getElementById('empates').innerText = empates;
 
 // Função que inicia o jogo 
 function jogar(escolhaJogador) {
@@ -36,16 +41,31 @@ function verificarResultado(jogador, computador) {
 function atualizarPlacar(resultado) {
     if (resultado === 'Você venceu!') {
         vitoriasJogador++;
+        localStorage.setItem('vitoriasJogador', vitoriasJogador);
         document.getElementById('vitorias-jogador').innerText = vitoriasJogador;
     } else if (resultado === 'Você perdeu!') {
         vitoriasComputador++;
+        localStorage.setItem('vitoriasComputador', vitoriasComputador);
         document.getElementById('vitorias-computador').innerText = vitoriasComputador;
     } else {
         empates++;
+        localStorage.setItem('empates', empates);
         document.getElementById('empates').innerText = empates;
     }
 }
 
 function resetarPagina() {
-    location.reload(); // Recarrega a página atual
+    // Recarrega a página sem resetar o placar
+    location.reload(); 
+}
+
+// Função para resetar o placar completamente (se desejado)
+function resetarPlacar() {
+    localStorage.clear(); // Limpa os dados armazenados
+    vitoriasJogador = 0;
+    vitoriasComputador = 0;
+    empates = 0;
+    document.getElementById('vitorias-jogador').innerText = vitoriasJogador;
+    document.getElementById('vitorias-computador').innerText = vitoriasComputador;
+    document.getElementById('empates').innerText = empates;
 }
