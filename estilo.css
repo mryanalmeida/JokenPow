@@ -65,9 +65,21 @@ button {
     font-size: 16px;
 }
 
+/* Botão "Jogar Novamente" */
+#jogar-novamente {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+}
+
 /*#escolha-jogador h2 */
-    /* Definir o texto em negrito */
-    /*font-weight: bold;*/
+/* Definir o texto em negrito */
+/*font-weight: bold;*/
 
 
 /* Media Query de telas menores que 600px (celulares) */
@@ -75,7 +87,7 @@ button {
     body {
         /* Colocar à  direita da tela a imagem de background*/
         background-position: right;
-        
+
     }
 
     #jogo {

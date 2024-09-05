@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do Jokenpô</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="estilo.css">
     <link rel="manifest" href="manifest.json">
 </head>
 
@@ -17,6 +17,7 @@
             <button onclick="jogar('pedra')">Pedra</button>
             <button onclick="jogar('papel')">Papel</button>
             <button onclick="jogar('tesoura')">Tesoura</button>
+            <button onclick="resetarPagina()" id="jogar-novamente">Jogar Novamente</button>
         </div>
         <div id="resultado">
             <p id="movimento-jogador"></p>
@@ -29,7 +30,6 @@
             <p>Vitórias do Computador: <span id="vitorias-computador">0</span></p>
             <p>Empates: <span id="empates">0</span></p>
         </div>
-
     </div>
     <script src="jogo.js"></script>
 </body>

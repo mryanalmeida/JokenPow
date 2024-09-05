@@ -45,3 +45,7 @@ function atualizarPlacar(resultado) {
         document.getElementById('empates').innerText = empates;
     }
 }
+
+function resetarPagina() {
+    location.reload(); // Recarrega a página atual
+}
