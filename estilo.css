@@ -121,9 +121,8 @@ button:hover {
 /* Media Query de telas menores que 600px (celulares) */
 @media only screen and (max-width: 600px) {
     body {
-        /* Colocar à  direita da tela a imagem de background*/
+        /* Colocar à direita da tela a imagem de background*/
         background-position: right;
-
     }
 
     #jogo {
@@ -149,5 +148,20 @@ button:hover {
 
     #placar p {
         font-size: 14px;
+    }
+
+    /* Ajuste específico para a exibição dos botões lado a lado em telas pequenas */
+    .botoes-acoes {
+        flex-direction: row; /* Alinha os botões na horizontal */
+        justify-content: center; /* Centraliza os botões */
+        gap: 10px; /* Espaço entre os botões */
+        margin-top: 15px;
+    }
+
+    #jogar-novamente,
+    #reiniciar-placar {
+        width: auto; /* Largura automática */
+        min-width: 100px; /* Largura mínima ajustada para telas pequenas */
+        text-align: center; /* Centraliza o texto dentro dos botões */
     }
 }
