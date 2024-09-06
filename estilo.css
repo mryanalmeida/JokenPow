@@ -65,21 +65,57 @@ button {
     font-size: 16px;
 }
 
-/* Botão "Jogar Novamente" */
-#jogar-novamente {
-    font-size: 18px;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #fff;
-    border: 2px solid #333;
-    border-radius: 5px;
-    color: #333;
+#botoes-acoes {
+    display: flex;
+    gap: 10px;
+    /* Espaço entre os botões */
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/*#escolha-jogador h2 */
-/* Definir o texto em negrito */
-/*font-weight: bold;*/
+#jogar-novamente,
+#reiniciar-placar {
+    background-color: #007BFF;
+    /* Cor de fundo azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#jogar-novamente:hover,
+#reiniciar-placar:hover {
+    background-color: #0056b3;
+    /* Cor de fundo mais escura ao passar o mouse */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Contêiner dos botões "Jogar Novamente" e "Reiniciar Placar" */
+.botoes-acoes {
+    display: flex;
+    justify-content: center;
+    /* Centraliza os botões dentro do contêiner */
+    gap: 10px;
+    /* Espaço entre os botões */
+    margin-top: 15px;
+}
+
+/* Definição individual dos botões */
+#jogar-novamente,
+#reiniciar-placar {
+    width: auto;
+    /* Deixa a largura automática para os botões */
+    min-width: 150px;
+    /* Largura mínima para os botões */
+    text-align: center;
+}
 
 
 /* Media Query de telas menores que 600px (celulares) */
